@@ -1,1 +1,11 @@
-ap.c
+/Debug/
+/Release/
+/build/
+/*.elf
+/*.bin
+/*.hex
+*.o
+*.d
+*.map
+/.settings/
+/.vscode/ipch/

@@ -1,6 +1,6 @@
 app/src/Heating Module Src/pid_control.o: \
  ../app/src/Heating\ Module\ Src/pid_control.c \
- C:/develop/stm32/MugMate/app/include/Heating\ Module\ hed/pid.h \
+ C:/develop/stm32/MugMate/app/include/Heating\ Module\ Hed/pid.h \
  C:/develop/stm32/MugMate/app/include/def.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h \
  ../Core/Inc/stm32f7xx_hal_conf.h \
@@ -38,9 +38,9 @@ app/src/Heating Module Src/pid_control.o: \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pcd.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_ll_usb.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pcd_ex.h \
- C:/develop/stm32/MugMate/app/include/Heating\ Module\ hed/pid_control.h \
- C:/develop/stm32/MugMate/app/include/Heating\ Module\ hed/pwm.h
-C:/develop/stm32/MugMate/app/include/Heating\ Module\ hed/pid.h:
+ C:/develop/stm32/MugMate/app/include/Heating\ Module\ Hed/pid_control.h \
+ C:/develop/stm32/MugMate/app/include/Heating\ Module\ Hed/pwm.h
+C:/develop/stm32/MugMate/app/include/Heating\ Module\ Hed/pid.h:
 C:/develop/stm32/MugMate/app/include/def.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:
 ../Core/Inc/stm32f7xx_hal_conf.h:
@@ -78,5 +78,5 @@ C:/develop/stm32/MugMate/app/include/def.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pcd.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_ll_usb.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pcd_ex.h:
-C:/develop/stm32/MugMate/app/include/Heating\ Module\ hed/pid_control.h:
-C:/develop/stm32/MugMate/app/include/Heating\ Module\ hed/pwm.h:
+C:/develop/stm32/MugMate/app/include/Heating\ Module\ Hed/pid_control.h:
+C:/develop/stm32/MugMate/app/include/Heating\ Module\ Hed/pwm.h:

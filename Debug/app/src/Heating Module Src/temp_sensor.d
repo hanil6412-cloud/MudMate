@@ -1,6 +1,6 @@
 app/src/Heating Module Src/temp_sensor.o: \
  ../app/src/Heating\ Module\ Src/temp_sensor.c \
- C:/develop/stm32/MugMate/app/include/Heating\ Module\ hed/temp_sensor.h \
+ C:/develop/stm32/MugMate/app/include/Heating\ Module\ Hed/temp_sensor.h \
  C:/develop/stm32/MugMate/app/include/def.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h \
  ../Core/Inc/stm32f7xx_hal_conf.h \
@@ -40,7 +40,7 @@ app/src/Heating Module Src/temp_sensor.o: \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pcd_ex.h \
  C:/develop/stm32/MugMate/app/include/uart.h \
  C:/develop/stm32/MugMate/app/include/def.h
-C:/develop/stm32/MugMate/app/include/Heating\ Module\ hed/temp_sensor.h:
+C:/develop/stm32/MugMate/app/include/Heating\ Module\ Hed/temp_sensor.h:
 C:/develop/stm32/MugMate/app/include/def.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:
 ../Core/Inc/stm32f7xx_hal_conf.h:

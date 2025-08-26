@@ -9,6 +9,7 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include app/src/Touch\ Module\ Src/subdir.mk
 -include app/src/Heating\ Module\ Src/subdir.mk
 -include app/src/subdir.mk
 -include app/subdir.mk

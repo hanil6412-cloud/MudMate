@@ -1,5 +1,5 @@
 app/src/Heating Module Src/fan.o: ../app/src/Heating\ Module\ Src/fan.c \
- C:/develop/stm32/MugMate/app/include/Heating\ Module\ hed/fan.h \
+ C:/develop/stm32/MugMate/app/include/Heating\ Module\ Hed/fan.h \
  C:/develop/stm32/MugMate/app/include/def.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h \
  ../Core/Inc/stm32f7xx_hal_conf.h \
@@ -39,7 +39,7 @@ app/src/Heating Module Src/fan.o: ../app/src/Heating\ Module\ Src/fan.c \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pcd_ex.h \
  C:/develop/stm32/MugMate/app/include/uart.h \
  C:/develop/stm32/MugMate/app/include/def.h
-C:/develop/stm32/MugMate/app/include/Heating\ Module\ hed/fan.h:
+C:/develop/stm32/MugMate/app/include/Heating\ Module\ Hed/fan.h:
 C:/develop/stm32/MugMate/app/include/def.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:
 ../Core/Inc/stm32f7xx_hal_conf.h:

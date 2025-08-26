@@ -36,18 +36,18 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_ll_usb.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pcd_ex.h \
  C:/develop/stm32/MugMate/app/ap.h \
- C:/develop/stm32/MugMate/app/include/Heating\ Module\ hed/fan.h \
+ C:/develop/stm32/MugMate/app/include/Heating\ Module\ Hed/fan.h \
  C:/develop/stm32/MugMate/app/include/def.h \
- C:/develop/stm32/MugMate/app/include/Heating\ Module\ hed/fan_speed.h \
- C:/develop/stm32/MugMate/app/include/Heating\ Module\ hed/pid.h \
- C:/develop/stm32/MugMate/app/include/Heating\ Module\ hed/pid_control.h \
- C:/develop/stm32/MugMate/app/include/Heating\ Module\ hed/pwm.h \
- C:/develop/stm32/MugMate/app/include/Heating\ Module\ hed/temp_sensor.h \
- C:/develop/stm32/MugMate/app/include/led.h \
- C:/develop/stm32/MugMate/app/include/def.h \
+ C:/develop/stm32/MugMate/app/include/Heating\ Module\ Hed/fan_speed.h \
+ C:/develop/stm32/MugMate/app/include/Heating\ Module\ Hed/pid.h \
+ C:/develop/stm32/MugMate/app/include/Heating\ Module\ Hed/pid_control.h \
+ C:/develop/stm32/MugMate/app/include/Heating\ Module\ Hed/pwm.h \
+ C:/develop/stm32/MugMate/app/include/Heating\ Module\ Hed/temp_sensor.h \
+ C:/develop/stm32/MugMate/app/include/Touch\ Module\ Hed/led.h \
  C:/develop/stm32/MugMate/app/include/utils.h \
+ C:/develop/stm32/MugMate/app/include/def.h \
  C:/develop/stm32/MugMate/app/include/uart.h \
- C:/develop/stm32/MugMate/app/include/touch.h
+ C:/develop/stm32/MugMate/app/include/Touch\ Module\ Hed/touch.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:
 ../Core/Inc/stm32f7xx_hal_conf.h:
@@ -86,15 +86,15 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_ll_usb.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pcd_ex.h:
 C:/develop/stm32/MugMate/app/ap.h:
-C:/develop/stm32/MugMate/app/include/Heating\ Module\ hed/fan.h:
+C:/develop/stm32/MugMate/app/include/Heating\ Module\ Hed/fan.h:
 C:/develop/stm32/MugMate/app/include/def.h:
-C:/develop/stm32/MugMate/app/include/Heating\ Module\ hed/fan_speed.h:
-C:/develop/stm32/MugMate/app/include/Heating\ Module\ hed/pid.h:
-C:/develop/stm32/MugMate/app/include/Heating\ Module\ hed/pid_control.h:
-C:/develop/stm32/MugMate/app/include/Heating\ Module\ hed/pwm.h:
-C:/develop/stm32/MugMate/app/include/Heating\ Module\ hed/temp_sensor.h:
-C:/develop/stm32/MugMate/app/include/led.h:
-C:/develop/stm32/MugMate/app/include/def.h:
+C:/develop/stm32/MugMate/app/include/Heating\ Module\ Hed/fan_speed.h:
+C:/develop/stm32/MugMate/app/include/Heating\ Module\ Hed/pid.h:
+C:/develop/stm32/MugMate/app/include/Heating\ Module\ Hed/pid_control.h:
+C:/develop/stm32/MugMate/app/include/Heating\ Module\ Hed/pwm.h:
+C:/develop/stm32/MugMate/app/include/Heating\ Module\ Hed/temp_sensor.h:
+C:/develop/stm32/MugMate/app/include/Touch\ Module\ Hed/led.h:
 C:/develop/stm32/MugMate/app/include/utils.h:
+C:/develop/stm32/MugMate/app/include/def.h:
 C:/develop/stm32/MugMate/app/include/uart.h:
-C:/develop/stm32/MugMate/app/include/touch.h:
+C:/develop/stm32/MugMate/app/include/Touch\ Module\ Hed/touch.h:
