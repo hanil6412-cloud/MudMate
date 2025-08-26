@@ -1,5 +1,0 @@
-../app/src/Heating Module Src/pid_control.c:19:6:controlInit	8	static
-../app/src/Heating Module Src/pid_control.c:33:6:controlSetTarget	16	static
-../app/src/Heating Module Src/pid_control.c:34:6:controlSetTunings	24	static
-../app/src/Heating Module Src/pid_control.c:35:7:controlGetLastU	4	static
-../app/src/Heating Module Src/pid_control.c:37:6:controlStep	32	static

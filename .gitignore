@@ -1,11 +1,10 @@
 /Debug/
 /Release/
-/build/
-/*.elf
-/*.bin
-/*.hex
+/.settings/
+/.vscode/
+*.elf
+*.bin
+*.hex
 *.o
 *.d
-*.map
-/.settings/
-/.vscode/ipch/
+*.mapDebug/

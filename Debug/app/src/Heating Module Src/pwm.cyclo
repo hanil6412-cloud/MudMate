@@ -1,4 +1,0 @@
-../app/src/Heating Module Src/pwm.c:12:6:pwmInit	1
-../app/src/Heating Module Src/pwm.c:18:6:pwmSetDuty	3
-../app/src/Heating Module Src/pwm.c:31:6:pwmStop	1
-../app/src/Heating Module Src/pwm.c:37:6:peltier_set_dir	1

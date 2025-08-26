@@ -1,3 +1,0 @@
-../app/ap.c:10:6:apInit	1
-../app/ap.c:17:13:setDutyAndReset	1
-../app/ap.c:23:6:apMain	2

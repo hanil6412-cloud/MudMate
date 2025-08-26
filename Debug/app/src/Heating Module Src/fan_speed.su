@@ -1,6 +1,0 @@
-../app/src/Heating Module Src/fan_speed.c:33:24:avg_diff_ticks	16	static
-../app/src/Heating Module Src/fan_speed.c:44:6:fan_rpm_Init	4	static
-../app/src/Heating Module Src/fan_speed.c:50:6:fan_Start	8	static
-../app/src/Heating Module Src/fan_speed.c:56:6:TACH_Reset	16	static,ignoring_inline_asm
-../app/src/Heating Module Src/fan_speed.c:69:10:fan_GetRPMx100	16	static
-../app/src/Heating Module Src/fan_speed.c:88:6:HAL_TIM_IC_CaptureCallback	48	static
