@@ -1,0 +1,150 @@
+/*
+ * ap.c
+ *
+ *  Created on: Aug 14, 2025
+ *      Author: sksgk
+ */
+
+#include "ap.h"
+
+volatile uint32_t Temp_read_test = 0;
+/*
+ * 프로그램 진행 방향:
+ * 1. 초기화 (apInit): LED, 온도 센서, UART, PWM, 터치 센서를 초기화.
+ * 2. 메인 루프 (apMain): 1초마다 온도 데이터를 읽고, 10초마다 상태를 업데이트.
+ * 3. 온도 처리: 온도 데이터를 읽어 정상/오류 여부 확인 후 버퍼에 저장 및 출력.
+ * 4. 알람 처리 (handleTemperatureAlarm): 고온, 저온, 센서 오류 시 LED와 UART로 알람 처리.
+ */
+
+// 함수 프로토타입 추가
+void handleTemperatureAlarm(uint32_t temperature, uint8_t alarm_type);
+
+void apInit()
+{
+	ledInit();
+
+	if (Temp_sensor_Init())
+	{
+		uartPrintf(_DEF_CH1, "MAX31855: 초기화 성공\r\n");
+	} else
+	{
+		uartPrintf(_DEF_CH1, "MAX31855: 초기화 실패\r\n");
+	}
+
+	uartInit();
+	pwmInit();
+	touchInit();
+}
+
+void apMain()
+{
+	uint32_t lastTempUpdate = 0;
+	uint32_t lastStatusUpdate = 0;
+	uint32_t tempReadCount = 0;
+
+	while (1)
+	{
+		uint32_t currentTime = millis();
+		touchUpdate();
+
+		// 온도 센서 읽기 (1초마다)
+		if (currentTime - lastTempUpdate >= 1000)
+		{
+			uint32_t temp = Temp_READ(_DEF_CH1);
+			tempReadCount++;
+
+			if (temp != 0xFFFFFFFF)
+			{
+				int32_t temp_whole = temp / 100;
+				uint32_t temp_frac = temp % 100;
+				Temp_buf_push((uint16_t) temp);
+				uartPrintf(_DEF_CH1, "[%lu] 온도: %d.%02u C\r\n", tempReadCount,
+						temp_whole, temp_frac);
+
+				if (temp > 10000)
+				{
+					handleTemperatureAlarm(temp, 1);
+				} else if ((int32_t) temp < -5000)
+				{
+					handleTemperatureAlarm(temp, 2);
+				} else
+				{
+					ledOff(_DEF_CH1);
+					handleTemperatureAlarm(temp, 0);
+				}
+			} else
+			{
+				uartPrintf(_DEF_CH1, "[%lu] 센서 오류\r\n", tempReadCount);
+				handleTemperatureAlarm(0, 3);
+			}
+			lastTempUpdate = currentTime;
+		}
+
+		// 상태 업데이트 (10초마다)
+		if (currentTime - lastStatusUpdate >= 10000)
+		{
+			uartPrintf(_DEF_CH1, "\r\n=== 상태 업데이트 ===\r\n");
+			MAX31855_PrintStatus();
+			uartPrintf(_DEF_CH1, "센서 상태: %s\r\n", MAX31855_IsHealthy() ? "양호" : "오류");
+
+			uint32_t avg_temp = Temp_GetMovingAverage(5);
+			if (avg_temp > 0)
+			{
+				int32_t avg_temp_whole = avg_temp / 100;
+				uint32_t avg_temp_frac = avg_temp % 100;
+				uartPrintf(_DEF_CH1, "5개 샘플 평균: %d.%02u C\r\n", avg_temp_whole,
+						avg_temp_frac);
+			}
+
+			uartPrintf(_DEF_CH1, "업타임: %lu.%lu 초\r\n", currentTime / 1000,
+					(currentTime % 1000) / 100);
+			lastStatusUpdate = currentTime;
+		}
+
+		HAL_Delay(50);
+	}
+}
+
+void handleTemperatureAlarm(uint32_t temperature, uint8_t alarm_type)
+{
+	int32_t temp_whole = temperature / 100;
+	uint32_t temp_frac = temperature % 100;
+
+	switch (alarm_type)
+	{
+	case 1: // 고온 경고
+		uartPrintf(_DEF_CH1, "!!! 고온 알람: %d.%02u C !!!\r\n", temp_whole, temp_frac);
+		for (int i = 0; i < 3; i++)
+		{
+			ledOn(_DEF_CH1);
+			HAL_Delay(200);
+			ledOff(_DEF_CH1);
+			HAL_Delay(200);
+		}
+		break;
+
+	case 2: // 저온 경고
+		uartPrintf(_DEF_CH1, "!!! 저온 알람: %d.%02u C !!!\r\n", temp_whole, temp_frac);
+		for (int i = 0; i < 2; i++)
+		{
+			ledOn(_DEF_CH1);
+			HAL_Delay(500);
+			ledOff(_DEF_CH1);
+			HAL_Delay(500);
+		}
+		break;
+
+	case 3: // 센서 오류
+		uartPrintf(_DEF_CH1, "!!! 센서 오류 알람 !!!\r\n");
+		for (int i = 0; i < 5; i++)
+		{
+			ledToggle(_DEF_CH1);
+			HAL_Delay(100);
+		}
+		break;
+
+	default: // 정상
+		ledOff(_DEF_CH1);
+		break;
+	}
+}

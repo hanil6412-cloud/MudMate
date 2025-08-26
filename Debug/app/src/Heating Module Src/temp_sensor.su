@@ -1,0 +1,10 @@
+../app/src/Heating Module Src/temp_sensor.c:23:6:Temp_sensor_Init	8	static
+../app/src/Heating Module Src/temp_sensor.c:46:10:Temp_READ	24	static
+../app/src/Heating Module Src/temp_sensor.c:100:6:MAX31855_ParseData	24	static
+../app/src/Heating Module Src/temp_sensor.c:157:24:MAX31855_GetLastReading	4	static
+../app/src/Heating Module Src/temp_sensor.c:166:6:MAX31855_IsHealthy	4	static
+../app/src/Heating Module Src/temp_sensor.c:176:13:MAX31855_GetFaultString	16	static
+../app/src/Heating Module Src/temp_sensor.c:193:6:MAX31855_PrintStatus	16	static
+../app/src/Heating Module Src/temp_sensor.c:208:6:Temp_buf_push	16	static
+../app/src/Heating Module Src/temp_sensor.c:222:10:Temp_GetMovingAverage	24	static
+../app/src/Heating Module Src/temp_sensor.c:238:6:MAX31855_RawDataTest	48	static

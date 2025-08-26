@@ -1,0 +1,3 @@
+../app/ap.c:10:6:apInit	8	static
+../app/ap.c:17:13:setDutyAndReset	16	static
+../app/ap.c:23:6:apMain	48	static

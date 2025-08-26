@@ -1,0 +1,33 @@
+
+
+void apInit(void)
+{
+    uartInit();
+    fanInit();
+}
+
+void apMain(void)
+{
+    uint16_t duty[] = {0, 250, 500, 750, 1000}; // 0%, 25%, 50%, 75%, 100%
+    uint8_t index = 0;
+
+    while (1)
+    {
+        // 듀티 사이클 설정
+        fanSetDuty(duty[index]);
+
+        // UART로 현재 듀티 사이클 출력 (정수 백분율)
+        uint16_t percent = (duty[index] * 100) / 1000; // 0~100%로 변환
+        uartPrintf(_DEF_CH1, "Duty: %d%%\r\n", percent);
+
+        // 1초 대기
+        HAL_Delay(5000);
+
+        // 인덱스 증가 (다음 듀티 사이클로 이동)
+        index++;
+        if (index >= sizeof(duty) / sizeof(duty[0]))
+        {
+            index = 0; // 배열 끝에 도달하면 처음으로
+        }
+    }
+}

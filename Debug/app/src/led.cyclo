@@ -1,0 +1,4 @@
+../app/src/led.c:14:6:ledInit	1
+../app/src/led.c:18:6:ledOn	2
+../app/src/led.c:28:6:ledOff	2
+../app/src/led.c:37:6:ledToggle	2

@@ -1,0 +1,11 @@
+../app/src/touch.c:74:6:touchInit	2
+../app/src/touch.c:95:6:touchUpdate	7
+../app/src/touch.c:145:14:touchGetState	2
+../app/src/touch.c:160:6:touchIsPressed	4
+../app/src/touch.c:173:6:touchIsReleased	4
+../app/src/touch.c:187:6:touchIsLongPressed	2
+../app/src/touch.c:199:6:touchSetLED	3
+../app/src/touch.c:217:6:touchSetAllLEDs	2
+../app/src/touch.c:235:6:touchOnPress	5
+../app/src/touch.c:270:6:touchOnRelease	5
+../app/src/touch.c:294:6:touchOnLongPress	6

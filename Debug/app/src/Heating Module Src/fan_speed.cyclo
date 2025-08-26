@@ -1,0 +1,6 @@
+../app/src/Heating Module Src/fan_speed.c:33:24:avg_diff_ticks	4
+../app/src/Heating Module Src/fan_speed.c:44:6:fan_rpm_Init	1
+../app/src/Heating Module Src/fan_speed.c:50:6:fan_Start	1
+../app/src/Heating Module Src/fan_speed.c:56:6:TACH_Reset	2
+../app/src/Heating Module Src/fan_speed.c:69:10:fan_GetRPMx100	3
+../app/src/Heating Module Src/fan_speed.c:88:6:HAL_TIM_IC_CaptureCallback	10

@@ -1,0 +1,4 @@
+../app/src/Heating Module Src/pwm.c:12:6:pwmInit	8	static
+../app/src/Heating Module Src/pwm.c:18:6:pwmSetDuty	32	static
+../app/src/Heating Module Src/pwm.c:31:6:pwmStop	8	static
+../app/src/Heating Module Src/pwm.c:37:6:peltier_set_dir	16	static
