@@ -15,12 +15,15 @@ void apInit(void)
 	fan_Start();
 	lv_init();
 	lv_port_disp_init();
-	lv_example_anim_2();
+//	lv_example_anim_2();
+	ui_init();
 }
 
 void apMain(void)
 {
-
-	lv_timer_handler();
-	delay(5);
+	while(1)
+	{
+		lv_timer_handler();
+		delay(5);
+	}
 }

@@ -21,6 +21,7 @@
 #include "uart.h"
 #include "touch.h"
 #include "lvgl/examples/anim/lv_example_anim.h"
+#include "UI/ui.h"
 
 extern void lv_init(void);
 extern uint32_t lv_timer_handler(void);
