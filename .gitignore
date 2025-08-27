@@ -1,10 +1,29 @@
+# 빌드 산출물
 /Debug/
 /Release/
-/.settings/
-/.vscode/
-*.elf
-*.bin
-*.hex
+/build/
+/*.elf
+/*.bin
+/*.hex
+/*.map
+/*.list
 *.o
 *.d
-*.mapDebug/
+*.su
+
+# IDE 관련 캐시 / 환경 설정
+/.settings/
+/.metadata/
+/.vscode/
+/.vscode/ipch/
+
+# CubeIDE 생성 자동 파일
+*.launch
+*.log
+*.trace
+*.uvguix*
+*.uvoptx*
+
+# OS 특화 무시 항목
+.DS_Store
+Thumbs.db

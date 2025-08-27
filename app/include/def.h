@@ -17,6 +17,9 @@
 #include <stdlib.h>
 #include <math.h>
 
+// Forward declarations
+extern void lv_init(void);
+
 /* ===== 채널 정의 ===== */
 #define _DEF_CH1                     0
 #define _DEF_CH2                     1

@@ -16,9 +16,14 @@
 #include <Heating Module Hed/temp_sensor.h>
 #include "def.h"
 #include "led.h"
+#include "lv_port_disp.h"
 #include "utils.h"
 #include "uart.h"
 #include "touch.h"
+#include "lvgl/examples/anim/lv_example_anim.h"
+
+extern void lv_init(void);
+extern uint32_t lv_timer_handler(void);
 
 void apInit();
 void apMain();
